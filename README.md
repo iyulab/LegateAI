@@ -25,6 +25,8 @@ What a criterion *says* belongs to whoever adopts the method. LegateAI carries n
 
 It is meant to be a **core capability built into agents that decide on their own**, across several products, rather than something each product writes for itself.
 
+The method itself, with diagrams: [docs/method.md](docs/method.md).
+
 ## Open questions
 
 - **What is a small decision?** The line between deciding alone and asking decides everything else, so it needs a definition that can be checked, not a feeling. Candidates to settle: whether a way back is defined, whether the effect stays inside the commission, whether it is visible outside it, and whether recorded criteria already cover it without conflict. Given the direction above, the principle is that *smallness is earned per kind of decision*: a floor that never moves (no way back, or visible outside, always asks), and above it a range that widens where measured agreement with the owner supports it. Open: the first threshold, how agreement is measured, and the shape of the port that supplies it.
