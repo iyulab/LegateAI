@@ -15,9 +15,22 @@ A legate acts under a bounded commission: free inside it, accountable for it, an
    5. If the owner chooses something other than the recommendation, it asks for the criterion behind the choice — not for the surface reason.
 3. **Criteria are managed, and kept aligned with the owner's judgment.** Recorded criteria and decision flows are checked against each other and conflicts are detected. The agent keeps working to adjust the criteria toward the owner's judgment, so they converge instead of drifting apart.
 
+## Direction
+
+LegateAI is meant to grow from a set of working rules into a **method** that other products can adopt: how an owner and an agent bring their judgment into line, and keep it there. The rules it starts from are the ones already used when delegating work to coding agents — deciding at different weights, recording a decision together with the way back, asking for a criterion instead of a verdict. The aim is to make them systematic and independent of any one product.
+
+The method is a flywheel, not a checklist. Where trust is measured — for example by re-judging a sample of the agent's own decisions without showing it the agent's answer, and recording the odds of being drawn — autonomy can widen exactly where agreement has been shown, and the owner's corrections become criteria that make the next decision easier. LegateAI owns the form of that loop; the measurement comes in through the port described under Scope.
+
+What a criterion *says* belongs to whoever adopts the method. LegateAI carries no organization's rules.
+
+It is meant to be a **core capability built into agents that decide on their own**, across several products, rather than something each product writes for itself.
+
 ## Open questions
 
-- **What is a small decision?** The line between deciding alone and asking decides everything else, so it needs a definition that can be checked, not a feeling. Candidates to settle: whether a way back is defined, whether the effect stays inside the commission, whether it is visible outside it, and whether recorded criteria already cover it without conflict.
+- **What is a small decision?** The line between deciding alone and asking decides everything else, so it needs a definition that can be checked, not a feeling. Candidates to settle: whether a way back is defined, whether the effect stays inside the commission, whether it is visible outside it, and whether recorded criteria already cover it without conflict. Given the direction above, the principle is that *smallness is earned per kind of decision*: a floor that never moves (no way back, or visible outside, always asks), and above it a range that widens where measured agreement with the owner supports it. Open: the first threshold, how agreement is measured, and the shape of the port that supplies it.
+- **How is it built in?** Agents that would embed it are written in different languages and run in different processes. The record shapes (a decision, a criterion, a recheck) may be best kept as a language-neutral specification with a reference implementation, rather than as one library. Open.
+- **Which way does the trust port point?** A system that measures trust may itself be a consumer of this method. The port should be defined here and implemented on the other side, so this repository depends on no measurement system and a measurement system can depend on this one without a cycle.
+- **Three weights.** Deciding alone and asking are the ends; between them the method names a middle: act on the recommendation, record the way back, and let the owner correct it afterwards — the owner's corrections here are what feed the loop. Open: its name and exactly where it borders the other two.
 
 ## Scope
 
