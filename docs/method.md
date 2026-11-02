@@ -1,6 +1,6 @@
 # The method
 
-> Status: **draft for the owner's review.** Principles marked *settled* were decided; everything under [Open decisions](#open-decisions) is a proposal, not a rule. There is no code yet — this document is the design the code will follow.
+> Status: **draft, reviewed and approved by the owner as the starting design.** Principles marked *settled* were decided outright; the points under [Decisions](#decisions-starting-positions) are approved as **starting positions** to be tuned against real corrections. There is no code yet — this document is the design the code will follow.
 
 ## The question this answers
 
@@ -86,9 +86,9 @@ LegateAI needs one thing it will not produce: **evidence of agreement between th
 - It does not draw the screens. How an owner is shown options is the adopting product's work; LegateAI defines what a question must contain.
 - It does not decide on the agent's behalf what its tools may do; it decides how the agent decides *whether* to act.
 
-## Open decisions
+## Decisions (starting positions)
 
-Each has a recommendation; none is settled.
+Each is approved as the position to start from. Numbers 1, 2, 3 and 6 are expected to change once there is measured data; 4, 5, 7 and 8 stand until real use shows a reason.
 
 1. **The first threshold.** How much measured agreement, over how many comparisons, lets a kind of decision move from Provisional to Alone? *Recommend:* start with a high bar and a minimum sample, expressed as configuration rather than constants, and tune on real corrections.
 2. **How agreement is measured.** Blind recheck of Alone decisions is the model; its burden on the owner needs a bound. *Recommend:* a fixed small draw rate that falls as agreement is shown and rises on disagreement, with the rate always recorded.

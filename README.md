@@ -25,7 +25,7 @@ What a criterion *says* belongs to whoever adopts the method. LegateAI carries n
 
 It is meant to be a **core capability built into agents that decide on their own**, across several products, rather than something each product writes for itself.
 
-The method itself, with diagrams: [docs/method.md](docs/method.md).
+The method itself, with diagrams and its starting decisions: [docs/method.md](docs/method.md).
 
 ## Open questions
 
