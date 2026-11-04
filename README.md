@@ -6,7 +6,7 @@ A legate acts under a bounded commission: free inside it, accountable for it, an
 
 ## Role
 
-1. **Small decisions are made alone.** The agent decides, tells the owner, and keeps the decision reversible. What makes a decision *small* is not yet defined — see [Open questions](#open-questions).
+1. **Small decisions are made alone.** The agent decides, tells the owner, and keeps the decision reversible. What makes a decision *small* is a fixed floor plus a range that is earned per kind of decision — see [the method](docs/method.md#three-weights); how far the range reaches is still open ([Open questions](#open-questions)).
 2. **Important decisions take the owner's choice.**
    1. The agent presents **options**.
    2. Each option carries its **grounds and trade-offs**.
@@ -29,7 +29,7 @@ The method itself, with diagrams and its starting decisions: [docs/method.md](do
 
 ## Open questions
 
-- **What is a small decision?** The line between deciding alone and asking decides everything else, so it needs a definition that can be checked, not a feeling. Candidates to settle: whether a way back is defined, whether the effect stays inside the commission, whether it is visible outside it, and whether recorded criteria already cover it without conflict. Given the direction above, the principle is that *smallness is earned per kind of decision*: a floor that never moves (no way back, or visible outside, always asks), and above it a range that widens where measured agreement with the owner supports it. Open: the first threshold, how agreement is measured, and the shape of the port that supplies it.
+- **How far does a kind of decision earn?** The floor is settled in [the method](docs/method.md#three-weights): a decision with no named way back, or one visible outside the commission, is always asked, and above the floor recorded criteria must cover it without conflict. What a decision *earns* beyond that is counted per kind, from measured agreement with the owner. Open: the first threshold, how agreement is measured, what a "kind" is, and the shape of the port that supplies the measurement.
 - **How is it built in?** Agents that would embed it are written in different languages and run in different processes. The record shapes (a decision, a criterion, a recheck) may be best kept as a language-neutral specification with a reference implementation, rather than as one library. Open.
 - **Which way does the trust port point?** A system that measures trust may itself be a consumer of this method. The port should be defined here and implemented on the other side, so this repository depends on no measurement system and a measurement system can depend on this one without a cycle.
 - **Three weights.** Deciding alone and asking are the ends; between them the method names a middle: act on the recommendation, record the way back, and let the owner correct it afterwards — the owner's corrections here are what feed the loop. Open: its name and exactly where it borders the other two.
